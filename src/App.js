@@ -1,20 +1,37 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+class HeaderHome extends Component {
+  render() {
+    let headerText = {color:'#5CA1E5', 'font-size':'40px'}
+    return (
+      <div>  
+      <h1 style={headerText}>MediaKit 2018</h1>
+      </div>
+    );
+  }
+}
+
+class Browser extends Component {
+  render() {
+    let style_div = {width:"40%", display:'inline-block'}
+    return (
+      <div style={style_div}>  
+      <h3>USUARIOS UNICOS!</h3>
+      </div>
+    );
+  }
+}
 
 class App extends Component {
   render() {
-    let name      =  'vantonio'
-    let Textcolor =  '#F00B42'
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2 style={{color:Textcolor}}>Welcome {name}</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <HeaderHome/>
+      <Browser/>
+      <Browser/>
+      <Browser/>
+      <Browser/>
       </div>
     );
   }
